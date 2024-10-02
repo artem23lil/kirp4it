@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+
+header {
+    position: sticky; 
+    top: 0; 
+    width: 100%;
+    background-color: #333; 
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s ease; 
+}
+
+header.sticky {
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+
+.logo img {
+    max-height: 105px; 
+    margin-right: 370px;
+    width: auto;
+    transition: transform 0.3s ease; 
+}
+
+header.sticky .logo img {
+    transform: scale(0.9); 
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    justify-content: center; 
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s; 
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ff6b00; 
+    color: white;
+}
+
+
+html {
+    scroll-behavior: smooth; 
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center; 
+    }
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+}
+
+
+.hero-image {
+    width: 100%; 
+    height: auto; 
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    z-index: -1; 
+}
+
+
+.hero-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    border-radius: 10px; 
+    z-index: 1; 
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+.about-factory {
+    padding: 4rem 5%;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
+}
+
+.about-factory-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.factory-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.factory-description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.factory-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.factory-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.products {
+    padding: 4rem 5%; 
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    margin-top: -50px; 
+    border-radius: 10px; 
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.product-item {
+    width: 450px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.btn {
+    background-color: #FFC107;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FFB300;
+}
+
+/* Видео */
+.video {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.video h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.video video {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+/*start*/
+
+
+
+
+.reviews {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.slider-container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+/* Дополнительные стили для слайдера */
+.slider-item {
+    display: flex; /* Используем flexbox для выравнивания */
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: center; /* Горизонтальное выравнивание по центру */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Отступ внутри отзыва */
+    width: 400px; /* Установите фиксированную ширину для отзыва */
+}
+
+.slick-slide img {
+    width: 100px; /* Ширина изображения */
+    height: 100px; /* Высота изображения */
+    border-radius: 50%; /* Круглая форма изображения */
+    margin-bottom: 15px; /* Отступ снизу */
+    display: block; /* Убедитесь, что изображение отображается как блочный элемент */
+    margin-left: auto; /* Центрируем по горизонтали */
+    margin-right: auto; /* Центрируем по горизонтали */
+}
+
+/*end*/
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #FFC107;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    background-color: #357ABD;
+}
+
+.slide-calculator {
+    position: fixed;
+    top: 50px; 
+    bottom: 190px; 
+    right: -400px;
+    width: 350px;
+    background-color: #222;
+    transition: right 0.5s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px; 
+}
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.close-calc-btn {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.calculator-ios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#calc-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: #333;
+    color: white;
+    text-align: right;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calc-btn {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.calc-btn.operator {
+    background-color: #f39c12;
+}
+
+.calc-btn.zero-btn {
+    grid-column: span 2;
+}
+
+.calc-btn:hover {
+    background-color: #666;
+}
+
+.calc-btn.operator:hover {
+    background-color: #e67e22;
+}
+
+.slide-calculator.active {
+    right: 0;
+}
+
+.image-circle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-circle {
+    position: fixed;
+    bottom: 110px; 
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.factory-gif {
+    width: 100%; 
+    max-width: 800px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.contact-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-contact {
+    position: fixed;
+    top: 50px; 
+    bottom: 270px;
+    right: -400px;
+    width: 350px;
+    background-color: #222;
+    transition: right 0.5s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+}
+
+.slide-contact.active {
+    right: 0;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.close-contact-btn {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.contact-details a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.image-circle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
